@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="'width=device-width, inital-scale=1.0">
+        <title>EDNS151 Membership Website</title>
+        <link rel="stylesheet" href="subscriptionStyle.css">
+    </header>   
+    <head>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery for AJAX -->
+  </head> 
+    <body>
+        <h1>Membership </h1>
+
+
+
+        <h3>Sign up now!</h3>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+      <button type="button" id="signupButton">Sign Up!</button>
+      <div id="result"></div>
+      <script>
+          $(document).ready(function () {
+              $("#signupButton").click(function () {
+                  var userName = $("#nameInput").val();
+                  $.ajax({
+                      type: "POST",
+                      url: "-java-backend-url", // the  Java backend URL
+                      data: { name: userName },
+                      success: function (response) {
+                          $("#result").html(response);
+                      }
+                  });
+              });
+          });
+      </script>
+  
+
+            </div>
+          </form>
+        <h2><u>Overiew of the Membership Information</u></h2>
+        <p> <dd> Residents inside and outside of Golden have the opportunity to join a community
+             of those who want to help suppoort the enviorment by reducing food waste. While our 
+             counrty continues to rely on the convenience of landfills, landfills continue to 
+             become filled with food packaging waste. However, buisnessed in Golden have come 
+             together to help rectify this problem and wants to work with the citizen inside 
+             and outside of Golden. Everyoe can help reduce the amount of food packaging that 
+             is ending up in landfills by joining the memebrship program.</dd>
+        </p>
+        <p2>
+            <dd>Once you join the membership program a multitude of opportunitues become available
+            to you. The rewards vary to price reduction, sales, raffles, themes nights, and 
+            pairing with other businesses. More information on rewards and events can be found lower on the website.</dd>
+        </p2>
+        <p3>
+          <h3></h3>
+          <img src="https://s3x9d5r6.stackpathcdn.com/wp-content/uploads/2019/09/Golden_Welcome_Sign.jpg"
+          width="250" 
+          height="150"
+          >
+        </p3>
+        <h2><u>Locations</u></h2>
+  
+       <p4> <dd> The mebership is applicable at the following location:
+            Gold Mine Bakery</dd> </p4>
+
+        <h3><u>Rewards for members:</u> </h3>
+        <dd>10% Off when you buy a dozen with a rusable box</dd>
+        <dd>5% off when part of the membership</dd>
+        <dd>6% off when you buy a half dozen and bring in the reusable box</dd>
+        <dd>When reusing the box 5 times get a free cupcake</dd>
+        <dd>When reusing the box 10 times get a free birthday candle set</dd>
+        <dd> When reusing the box 100 times get a baking class</dd>
+      </dl>
+    <br></br>
+        <form action="action_page.php" method="post">
+            <div class="imgcontainer">
+              <img src="https://images.squarespace-cdn.com/content/v1/60d0bfa7311c361a11652147/deacae0e-d371-42f3-9e52-6fdc02d7c3ab/goldminecupcakes+logo_Yellow.png" 
+                width="245" 
+                height="55" />
+            </div>
+            <h5>Find Member Status</h5>
+            <button type="button">Buisness Log In</button>
+            </div>
+          </form>
+          <dl>
+
+          
+    </body>
+</html> 
