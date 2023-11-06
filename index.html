@@ -5,51 +5,30 @@
         <meta name="viewport" content="'width=device-width, inital-scale=1.0">
         <title>EDNS151 Membership Website</title>
         <link rel="stylesheet" href="subscriptionStyle.css">
-    </header>   
-    <head>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery for AJAX -->
-  </head> 
+    </header>    
     <body>
         <h1>Membership </h1>
 
-
-
-        <h3>Sign up now!</h3>
-        <input type="text" id="nameInput" placeholder="Enter your name">
-      <button type="button" id="signupButton">Sign Up!</button>
-      <div id="result"></div>
-      <script>
-          $(document).ready(function () {
-              $("#signupButton").click(function () {
-                  var userName = $("#nameInput").val();
-                  $.ajax({
-                      type: "POST",
-                      url: "-java-backend-url", // the  Java backend URL
-                      data: { name: userName },
-                      success: function (response) {
-                          $("#result").html(response);
-                      }
-                  });
-              });
-          });
-      </script>
-  
-
+        <h3><u>Sign up now!</u></h3>
+        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post" required>
+          Sign Up: <input type="text" name="fname">
+          <input type="submit" value=" Submit">
+        </form>
+        
             </div>
           </form>
         <h2><u>Overiew of the Membership Information</u></h2>
-        <p> <dd> Residents inside and outside of Golden have the opportunity to join a community
-             of those who want to help suppoort the enviorment by reducing food waste. While our 
-             counrty continues to rely on the convenience of landfills, landfills continue to 
-             become filled with food packaging waste. However, buisnessed in Golden have come 
-             together to help rectify this problem and wants to work with the citizen inside 
-             and outside of Golden. Everyoe can help reduce the amount of food packaging that 
-             is ending up in landfills by joining the memebrship program.</dd>
+        <p> <dd> Residents inside and outside of Golden have the opportunity to join a community of those 
+          who want to help support the environment by reducing food waste. While our country continues 
+          to rely on the convenience of landfills, landfills continue to become filled with food packaging 
+          waste. However, businesses in Golden have come together to help rectify this problem and want to 
+          work with the citizens inside and outside of Golden. Everyone can help reduce the amount of food 
+          packaging that ends up in landfills by joining this membership program.</dd>
         </p>
         <p2>
-            <dd>Once you join the membership program a multitude of opportunitues become available
-            to you. The rewards vary to price reduction, sales, raffles, themes nights, and 
-            pairing with other businesses. More information on rewards and events can be found lower on the website.</dd>
+            <dd>Once you join the membership program, a multitude of opportunities become available for you. 
+              The rewards vary from price reduction, sales, raffles, theme nights, and pairing with other businesses. 
+              More information on rewards and events can be found on the bottom of the website.</dd>
         </p2>
         <p3>
           <h3></h3>
@@ -60,16 +39,15 @@
         </p3>
         <h2><u>Locations</u></h2>
   
-       <p4> <dd> The mebership is applicable at the following location:
+       <p4> <dd> The membership is applicable at the following locations:
             Gold Mine Bakery</dd> </p4>
 
         <h3><u>Rewards for members:</u> </h3>
-        <dd>10% Off when you buy a dozen with a rusable box</dd>
-        <dd>5% off when part of the membership</dd>
-        <dd>6% off when you buy a half dozen and bring in the reusable box</dd>
+        <dd>10% off when you buy a dozen with the reusable box</dd>
+        <dd>5% off when you are a part of the membership</dd>
+        <dd>6% off when you buy a half dozen and shop with the reusable box</dd>
         <dd>When reusing the box 5 times get a free cupcake</dd>
         <dd>When reusing the box 10 times get a free birthday candle set</dd>
-        <dd> When reusing the box 100 times get a baking class</dd>
       </dl>
     <br></br>
         <form action="action_page.php" method="post">
